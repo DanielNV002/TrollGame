@@ -9,7 +9,7 @@ public class Spikes : MonoBehaviour
             PlayerReset playerReset = other.GetComponent<PlayerReset>();
             if (playerReset != null)
             {
-                playerReset.ResetPosition(); // Llamamos al método de reinicio
+                playerReset.ResetGame(); // Llamamos al método de reinicio
                 Debug.Log("¡Jugador tocó los pinchos! Reiniciando posición...");
             }
         }

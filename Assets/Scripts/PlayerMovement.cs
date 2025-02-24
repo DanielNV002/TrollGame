@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
+    [SerializeField] private LayerMask platformLayer;
     [SerializeField] private Animator animator; // Asegúrate de asignarlo desde el Inspector
 
     private float horizontal;
@@ -29,8 +30,8 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
 
         // Detectar si está en el suelo o en el aire para cambiar la animación
-        animator.SetBool("IsTouchingGround", isGrounded());
-        animator.SetBool("IsWalking", horizontal != 0 && isGrounded()); // Camina solo si está en el suelo
+        animator.SetBool("IsTouchingGround", (isGrounded() || isPlatformed()));
+        animator.SetBool("IsWalking", horizontal != 0 && (isGrounded() || isPlatformed())); // Camina solo si está en el suelo
 
         if (!isFacingRight && horizontal > 0f)
         {
@@ -44,7 +45,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void Jump(InputAction.CallbackContext context)
     {
-        if (context.performed && isGrounded())
+        if (context.performed && (isGrounded() || isPlatformed()))
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
         }
@@ -58,6 +59,11 @@ public class PlayerMovement : MonoBehaviour
     private bool isGrounded()
     {
         return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
+    }
+
+    private bool isPlatformed()
+    {
+        return Physics2D.OverlapCircle(groundCheck.position, 0.2f, platformLayer);
     }
 
     private void Flip()

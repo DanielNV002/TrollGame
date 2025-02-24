@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 581840129081109570}
   - component: {fileID: 972225197431284802}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GrassTiles_94
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +96,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5944766009376342990}
   - component: {fileID: 6222482426182097115}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: DirtTiles_99
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -184,7 +184,7 @@ GameObject:
   - component: {fileID: 6507090126483437743}
   - component: {fileID: 6936071015305285192}
   - component: {fileID: 6359471977592558582}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: PlatformGrass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -310,7 +310,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4225049131627494477}
   - component: {fileID: 6539539582569304604}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ActivationZone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -388,7 +388,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7004197333879722912}
   - component: {fileID: 7515718422909716890}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: DirtTiles_94
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -474,7 +474,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4717543158855813531}
   - component: {fileID: 7949655064009014469}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GrassTiles_99
   m_TagString: Untagged
   m_Icon: {fileID: 0}
